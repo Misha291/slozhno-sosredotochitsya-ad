@@ -2,6 +2,17 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--color-dark-blue, #000028);
+
+  background-image: var(--background-image);
+
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  color: var(--text-color-1);
 }
-
-
