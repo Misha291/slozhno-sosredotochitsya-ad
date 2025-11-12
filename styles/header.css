@@ -1,0 +1,105 @@
+.header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: var(--page-padding);
+}
+
+.header__theme-menu {
+    align-self: end;
+    padding-top: calc(73px - var(--page-padding));
+    color: var(--theme-menu-button);
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.header__theme-menu-button {
+    cursor: pointer;
+    padding: 0;
+    width: 70px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.header__theme-menu-button:hover {
+    border: 1px solid var(--theme-menu-hover);
+}
+
+.header__theme-menu-button:focus-visible {
+    outline: none;
+    border-bottom: 1px solid var(--theme-menu-button);
+}
+
+.header__theme-menu-button_active {
+    pointer-events: none;
+    border: 1px solid var(--theme-menu-button);
+}
+
+.header__theme-menu-button_active:hover {
+    border: 1px solid var(--theme-menu-button);
+}
+
+.header-title {
+    padding: 68px 0 55px;
+}
+
+.header__decoration {
+    opacity: 0;
+    position: absolute;
+    color: var(--title-decor-color);
+    top: var(--page-padding);
+    right: calc(28px + var(--page-padding));
+}
+
+.header__decoration::after {
+    content: '';
+    position: absolute;
+    right: -19px;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--title-decor-color);
+    box-shadow: 0 0 4px 2px var(--title-decor-color);
+}
+
+@media (min-width: 768px) {
+   .header__theme-menu {
+       padding-top: calc(190px - var(--page-padding));
+   }
+
+    .header-title {
+        margin-left: calc(-1 * var(--page-padding));
+        padding: 175px 0 162px;
+    }
+
+    .header-text {
+        max-width: 50%;
+        align-self: end;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header__theme-menu {
+        padding-top: 0;
+        align-self: center;
+    }
+
+    .header__theme-menu-list {
+        flex-direction: row;
+        column-gap: 10px;
+    }
+
+    .header-title {
+        padding: 273px 0 114px;
+    }
+}
