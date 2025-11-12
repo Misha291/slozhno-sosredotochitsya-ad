@@ -9,8 +9,41 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+
+    --decorated-zone: #353430;
+    --theme-menu-button: #353430;
+    --theme-menu-hover: #35343066;
+    --logo-title-color: #FFC2E6;
+    --section-title-color: #353430;
+    --title-decor-color: #FF8DCB;
+    --article-title-color: #353430;
+    --article-text-color: #353430;
+
+    --font-family: 'IBM Plex Mono', monospace;
+    --font-size: 18px;
+
+    --cover-image: url("../images/cover-image-dark.png");
 }
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --decorated-zone: #353430;
+        --theme-menu-button: #353430;
+        --theme-menu-hover: #35343066;
+        --logo-title-color: #FFC2E6;
+        --section-title-color: #353430;
+        --title-decor-color: #FF8DCB;
+        --article-title-color: #353430;
+        --article-text-color: #353430;
+
+        --font-family: 'IBM Plex Mono', monospace;
+        --font-size: 18px;
+
+        --cover-image: url("../images/cover-image-dark.png");
+    }
+  }
