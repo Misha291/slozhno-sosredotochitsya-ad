@@ -1,18 +1,137 @@
+@import "header.css";
+@import "info.css";
+
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-color: var(--color-dark-blue, #000028);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-image: var(--cover-image-dark);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-  background-image: var(--background-image);
+/* Стили для декоративных заголовков */
+.title-decor {
+    color: var(--section-title-color);
+    background-color: var(--title-decor-color);
+    font-weight: bold;
+    line-height: 23.4px;
+    font-size: 18px;
+}
 
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  
-  color: var(--text-pink-3);
+.title-decor_info {
+    font-weight: normal;
+}
+
+/* Стили для логотипов "no focus" и "focus" */
+.logo-title {
+    color: var(--logo-title-color);
+    font-size: var(--font-size-no-focus);
+    text-shadow: 4px 4px 0 var(--title-decor-color);
+    font-weight: bold;
+    line-height: 0.825;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    padding: 40px var(--page-padding);
+}
+
+/* Стили для галереи изображений */
+.pictures-collage {
+    display: grid;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.pictures-collage-item {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    position: relative;
+    padding: var(--page-padding);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-title {
+    text-shadow: 2px 2px 0 var(--title-decor-color);
+}
+
+/* Декоративные уголки для шапки и футера */
+.decorated-zone {
+    position: relative;
+}
+
+.decorated-zone::before {
+    content: '';
+    position: absolute;
+    top: var(--page-padding);
+    right: var(--page-padding);
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid var(--decorated-zone);
+    border-right: 1px solid var(--decorated-zone);
+}
+
+.decorated-zone::after {
+    content: '';
+    position: absolute;
+    bottom: var(--page-padding);
+    left: var(--page-padding);
+    width: 25px;
+    height: 25px;
+    border-bottom: 1px solid var(--decorated-zone);
+    border-left: 1px solid var(--decorated-zone);
+}
+
+@media (min-width: 768px) {
+    .logo-title {
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+
+    .main {
+        padding: 60px var(--page-padding);
+        row-gap: 80px;
+    }
+
+    .pictures-collage {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "sunset sunset ice-cream"
+            "tape books ice-cream"
+            "tape street street";
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .sunset {
+        grid-area: sunset;
+    }
+
+    .ice-cream {
+        grid-area: ice-cream;
+    }
+
+    .tape {
+        grid-area: tape;
+    }
+
+    .books {
+        grid-area: books;
+    }
+
+    .street {
+        grid-area: street;
+    }
 }
