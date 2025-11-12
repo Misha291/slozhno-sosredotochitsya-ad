@@ -16,7 +16,20 @@
   --color-grey: #353430;
 
   --font-family: 'IBM Plex Mono', monospace;
+  
   --font-size: 18px;
+  --font-size-no-focus: 157px;
+
+  --global-padding: 10px;
 
   --background-image: url("../images/cover-image-dark.png");
 }
+
+@media(min-width: 768px) {
+
+  :root {
+
+    --global-padding: 20px;
+  }
+}
+
