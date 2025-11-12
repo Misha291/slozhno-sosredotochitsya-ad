@@ -22,7 +22,7 @@
     --font-family: 'IBM Plex Mono', monospace;
     --font-size: 18px;
 
-    --cover-image: url("../images/cover-image-dark.png");
+    --cover-image-dark: url("../images/cover-image-light.png");
 }
 
 .theme-light .page {
@@ -44,6 +44,6 @@
         --font-family: 'IBM Plex Mono', monospace;
         --font-size: 18px;
 
-        --cover-image: url("../images/cover-image-dark.png");
+        --cover-image-light: url("../images/cover-image-light.png");
     }
   }
