@@ -1,0 +1,94 @@
+.section {
+    display: grid;
+    line-height: 23.4px;
+}
+
+.section-title {
+    font-weight: bold;
+    color: var(--section-title-color);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    margin-bottom: 20px;
+}
+
+.article-text {
+    color: var(--article-text-color);
+    padding-top: 10px;
+}
+
+.link {
+    text-decoration: none;
+    text-shadow: 1px 1px 0 var(--title-decor-color);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link:focus-visible {
+    outline: 1px solid var(--article-text-color);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.reasons-list,
+.concentration-list,
+.advices-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.title-decor {
+    color: var(--title-decor-color);
+}
+
+.title-accent {
+    margin-bottom: 20px;
+}
+
+.mini-title {
+    font-size: 18px;
+}
+
+.advices-article {
+}
+
+@media (min-width: 768px) {
+    .section:has(.reasons-list) {
+        grid-template-columns: max-content 1fr;
+        gap: 20px;
+    }
+
+    .section-title {
+        max-width: 236px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-title {
+        max-width: 315px;
+    }
+
+    .concentration-list {
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    
+    .concentration-list .concentration-list-item {
+        flex: 1 1;
+    }
+
+   
+    .advices-list {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
