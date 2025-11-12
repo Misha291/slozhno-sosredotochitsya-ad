@@ -19,7 +19,7 @@
 
   --page-padding: 10px;
 
-  --cover-image: url("../images/cover-image-dark.png");
+  --cover-image-dark: url("../images/cover-image-dark.png");
 }
 
 :root {
@@ -39,7 +39,7 @@
 
   --page-padding: 10px;
 
-  --cover-image: url("../images/cover-image-dark.png");
+  --cover-image-light: url("../images/cover-image-light.png");
 }
 
 @media(min-width: 768px) {
