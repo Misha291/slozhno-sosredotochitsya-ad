@@ -1,0 +1,36 @@
+.interactive-element {
+  position: relative;
+  cursor: pointer;
+}
+
+.interactive-element:focus {
+  outline: none;
+}
+
+.margin-bottom {
+  margin: 0 0 10px;
+}
+
+.title-accent {
+  background-color: var(--title-decor-color);
+  color: var(--section-title-color);
+  font-weight: bold;
+}
+
+.title-bold {
+  font-weight: bold;
+  color: var(--article-title-color);
+}
+
+.title-decor_info {
+  font-weight: normal;
+  background-color: var(--title-decor-color);
+  color: var(--section-title-color);
+}
+
+.mini-title {
+  font-size: 18px;
+  background-color: var(--title-decor-color);
+  color: var(--section-title-color);
+  font-weight: bold;
+}
