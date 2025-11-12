@@ -17,6 +17,8 @@
   --font-family: 'IBM Plex Mono', monospace;
   --font-size: 18px;
 
+  --background-image: url("../images/cover-image-dark.png");
+
 }
 
 .theme-dark .page {
