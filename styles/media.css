@@ -32,7 +32,6 @@
     padding: 0 var(--page-padding);
   }
 
-  /* Стили для секций с двухколоночной layout */
   .section:first-of-type {
     grid-template-columns: max-content 1fr;
   }
@@ -45,19 +44,16 @@
     grid-row: span 3;
   }
 
-  /* Стили для текстового контента в секциях */
   .section:not(.concentration, .pictures) .article-title,
   .section:not(.concentration, .pictures) .article-text {
     grid-column: 2 / -1;
   }
 
-  /* Стили для секции concentration (факторы) */
   .concentration .article-title,
   .concentration .article-text {
     grid-column: span 1;
   }
 
-  /* Стили для секции pictures (галерея) */
   .pictures {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, min-content);
