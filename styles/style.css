@@ -8,15 +8,16 @@
     font-family: var(--font-family);
     font-size: var(--font-size);
     background-image: var(--cover-image-dark);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-size: cover;                  /*Масштабирует фоновое изображение так, чтобы оно полностью покрывало всю область элемента*/
+    background-position: center;             /*Выравнивает фоновое изображение по центру элемента.*/
+    background-attachment: fixed;           /*Фиксирует фоновое изображение относительно области просмотра.*/
 }
 
+/* Стили для декоративных заголовков */
 .title-decor {
     color: var(--section-title-color);
     background-color: var(--title-decor-color);
-    font-weight: bold;
+    font-weight: bold;                          /*Делает текст полужирным.*/
     line-height: 23.4px;
     font-size: 18px;
 }
@@ -25,6 +26,7 @@
     font-weight: normal;
 }
 
+/* Стили для логотипов "no focus" и "focus" */
 .logo-title {
     color: var(--logo-title-color);
     font-size: var(--font-size-no-focus);
@@ -35,13 +37,14 @@
 
 .main {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;             /*Располагает дочерние элементы (секции) в колонку, вертикально.*/
     row-gap: 50px;
     padding: 40px var(--page-padding);
 }
 
+/* Стили для галереи изображений */
 .pictures-collage {
-    display: grid;
+    display: grid;          /*подходит для создания сеток изображений*/
     gap: 10px;
     padding-top: 10px;
 }
@@ -49,7 +52,7 @@
 .pictures-collage-item {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover;     /*обрезает изображение, сохраняя его пропорции, чтобы оно полностью заполнило свою область, не искажаясь*/
 }
 
 .footer {
@@ -65,8 +68,9 @@
     text-shadow: 2px 2px 0 var(--title-decor-color);
 }
 
+/* Декоративные уголки для шапки и футера */
 .decorated-zone {
-    position: relative;
+    position: relative;   /*устанавливает относительное позиционирование для элемента*/
 }
 
 .decorated-zone::before {
@@ -105,7 +109,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
             "sunset sunset ice-cream"
-            "tape books ice-cream"
+            "tape books ice-cream"           /*именовать области сетки и располагать их в нужном порядке с помощью текстового описания*/
             "tape street street";
         gap: 20px;
         padding-top: 20px;
