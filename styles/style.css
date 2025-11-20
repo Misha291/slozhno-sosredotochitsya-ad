@@ -40,7 +40,6 @@
     padding: 40px var(--page-padding);
 }
 
-/* Стили для галереи изображений */
 .pictures-collage {
     display: grid;
     gap: 10px;
